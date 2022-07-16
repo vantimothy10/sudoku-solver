@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<div class="container">
+    <mat-grid-list cols="9" >
+        <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+                <input type="text" value={{tile.text}} placeholder="empty">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<button mat-button color="primary" (click)="submit()">Primary</button> 
